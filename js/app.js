@@ -36,7 +36,7 @@ const displayContent = (text) => {
   else{
     return text;
   }
-    //  text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+    
     // console.log(text)
 };
 
@@ -63,6 +63,8 @@ const switchTab = (id) => {
 const createPost = (post) => {
   // console.log(post);
     let image = post.image;
+    let commentsuser = post.comments[0];
+    let comments = post.comments[0];
     // console.log(image);
     let div = document.createElement( "article" );
     div.classList.add( "post" );
@@ -132,9 +134,9 @@ const createPost = (post) => {
                   <div class="post__description">
                     <small>
                       <a class="post__name--underline" href="#">
-                          ${post.comments?.user}
+                          ${commentsuser?.user}
                       </a>
-                      ${post.comments?.text}
+                      ${comments?.text}
                     </small>
                   </div>
                   <span class="post__date-time">30 minutes ago</span>
