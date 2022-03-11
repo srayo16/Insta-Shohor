@@ -152,8 +152,6 @@ const createPost = (post) => {
 const showPosts = (posts) => {
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
-    
-
     posts.forEach((post) => {
         const div = createPost(post);
         productsContainer.appendChild(div);
@@ -175,7 +173,7 @@ const displayReportedPosts = () => {
       let reportFeild = document.getElementById( "reported" );
       reportFeild.textContent = '';
       reportedPosts.forEach((post) => {
-      console.log(post);
+      // console.log(post);
         let div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
